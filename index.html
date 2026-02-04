@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Ilana❤️</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            height: 100vh;
+            margin: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            max-width: 420px;
+        }
+
+        h1 {
+            color: #ff4d6d;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 12px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .yes {
+            background-color: #ff4d6d;
+            color: white;
+        }
+
+        .yes:hover {
+            transform: scale(1.1);
+        }
+
+        .no {
+            background-color: #ccc;
+        }
+
+        img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 20px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+<div class="card" id="card">
+    <h1>Heyyy lil bby wil je mijn valentijn zijn?💖</h1>
+
+    <button class="yes" onclick="sayYes()">Ja</button>
+    <button class="no" onclick="changeMind(this)">Nee</button>
+</div>
+
+<script>
+    function sayYes() {
+        document.getElementById("card").innerHTML = `
+            <h1>🥰 Goed gekozen! 🥰</h1>
+            <p>Lieve Ilana,</p>
+            <p>
+                Ik heb heel veel zin om deze valentijnsdag met jou te vieren.  
+                We gaan lekker genieten bij Ken's Sushi samen bby!  
+                Ik heb er zin in :)
+            </p>
+            <p>I love you bbyyyy!!! 💘</p>
+            <img src="ilana.jpeg" alt="Wij samen">
+        `;
+    }
+
+    function changeMind(button) {
+        button.innerText = "Ja";
+        button.className = "yes";
+        button.onclick = sayYes;
+    }
+</script>
+
+</body>
+</html>
